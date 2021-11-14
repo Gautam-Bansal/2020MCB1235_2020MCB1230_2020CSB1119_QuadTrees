@@ -43,10 +43,10 @@ struct Node* initializeRoot(){
 
 // insert function 
 // NOTE : According to standard graphing method/axes
-//        nw (NorthWest) contains 1st quadrant and +x and +y axes
-//        ne contains 2nd quadrant
-//        se contains 3rd quadrant along with -x and -y axes
-//        sw contains 4th quadrant
+//        ne (NorthWest) contains 1st quadrant and +x and +y axes
+//        nw contains 2nd quadrant
+//        sw contains 3rd quadrant along with -x and -y axes
+//        se contains 4th quadrant
 void insert(struct Node** root, double xCoordinate, double yCoordinate, int charge){
 	if(*root == NULL)
 		*root = (newNode(xCoordinate, yCoordinate, charge));

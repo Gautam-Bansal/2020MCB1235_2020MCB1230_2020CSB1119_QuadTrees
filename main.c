@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <math.h>
+#define K 1000000000
 
 
 // node
 struct Node{
     double x , y; // co-ordinates
-    int charge;   // charge/mass value
+    double charge;   // charge/mass value
     
     struct Node* nw; // NorthWest
     struct Node* ne; // NorthEast
@@ -16,7 +18,7 @@ struct Node{
 
 // function to allocate memory and values to node
 // returns node
-struct Node* newNode(double xCoordinate, double yCoordinate, int _charge){
+struct Node* newNode(double xCoordinate, double yCoordinate, double _charge){
     
     // allocating memory
     struct Node* temp = (struct Node*)malloc(sizeof(struct Node));
@@ -37,9 +39,74 @@ struct Node* newNode(double xCoordinate, double yCoordinate, int _charge){
 
 // utility function to initialize root 
 struct Node* initializeRoot(){
-    struct Node* temp = newNode(0.0, 0.0, 0);
+    struct Node* temp = newNode(0.0, 0.0, 0.0);
     return temp;
 }
+
+double dist(double x1, double x2, double y1, double y2){
+    return sqrt(pow(x1 - x2, 2.0) + pow(y1 - y2, 2.0));
+}
+
+double electrofield(struct Node* root, double x, double y, double *field){
+    if(root==NULL){
+        return 0.0;
+    }
+    double dis = dist(root->x, x, root->y, y);
+    double new;
+    if(dis==0){
+        new = 0.0;
+    }
+    else{
+        new = (K*root->charge)/pow(dis, 2.0);
+    }
+    *field = *field + new + electrofield(root->ne, x, y, field) + electrofield(root->nw, x, y, field) + electrofield(root->se, x, y, field) + electrofield(root->sw, x, y, field);
+    return *field;
+}
+
+struct Node* nearestPoint(struct Node* root, double x, double y, double *min){
+    if(root==NULL){
+        return NULL;
+    }
+    double distance = dist(root->x, x, root->y, y);
+    struct Node* closest = NULL;
+    if(distance <= *min){
+        closest = root;
+        *min = distance;
+    }
+    struct Node* temp1, *temp2, *temp3;
+    if(x<root->x && y > root->y){
+        temp1 = nearestPoint(root->nw, x, y, min);
+        temp2 = nearestPoint(root->ne, x, y, min);
+        temp3 = nearestPoint(root->sw, x, y, min);
+    }
+    else if(x>=root->x && y >= root->y){
+        temp1 = nearestPoint(root->ne, x, y, min);
+        temp2 = nearestPoint(root->nw, x, y, min);
+        temp3 = nearestPoint(root->se, x, y, min);
+    }
+    else if(x<=root->x && y <= root->y){
+        temp1 = nearestPoint(root->sw, x, y, min);
+        temp2 = nearestPoint(root->nw, x, y, min);
+        temp3 = nearestPoint(root->se, x, y, min);
+    }
+    else if(x>root->x && y < root->y){
+        temp1 = nearestPoint(root->se, x, y, min);
+        temp2 = nearestPoint(root->ne, x, y, min);
+        temp3 = nearestPoint(root->sw, x, y, min);
+    }
+    if(temp1!=NULL){
+        closest = temp1;
+    }
+    if(temp2!=NULL){
+        closest = temp2;
+    }
+    if(temp3!=NULL){
+        closest = temp3;
+    }
+    return closest;
+
+}
+
 
 // insert function 
 // NOTE : According to standard graphing method/axes
@@ -91,20 +158,24 @@ void find(struct Node* root, double xCoordinate, double yCoordinate){
     struct Node* temp = searchFun(root, xCoordinate, yCoordinate);
     
     if(temp == NULL) printf("No charge is present at this co-ordinate!");
-    else printf("Charge of value %d is present at this co-ordinate.", temp->charge);
+    else printf("Charge of value %f is present at this co-ordinate.", temp->charge);
 }
 
 void main(){
     struct Node* root;
     root = initializeRoot();
     if(searchFun(root, 0.1, 0.1)==NULL)//since new implementation of insert function removes the else statement, adding error exception here
-        root = insert(root, 0.1, 0.1, 2);
+        root = insert(root, 0.1, 0.1, 2.0);
     else 
         printf("Error! Could not insert because some charge is already present there.\n");    
     if(searchFun(root, 0.2, 0.2)==NULL)
-        root = insert(root, 0.2, 0.2, 3);
+        root = insert(root, 0.2, 0.2, 3.0);
     else 
         printf("Error! Could not insert because some charge is already present there.\n");
     
     find(root, 0.1, 0.1); // not working don't know why, will look later maybe //fixed - AS
+    double min = dist(0.0, 0.04, 0.0, 0.04);
+    printf("\nClosest point to (0.04,0.04) is (%f,%f)", nearestPoint(root, 0.04, 0.04, &min)->x, nearestPoint(root, 0.04, 0.04, &min)->y);
+    double pot = 0.0;
+    printf("\nPotential at (0,0) is %f", electrofield(root, 0.0, 0.0, &pot));
 }

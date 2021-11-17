@@ -161,6 +161,39 @@ void find(struct Node* root, double xCoordinate, double yCoordinate){
     else printf("Charge of value %f is present at this co-ordinate.", temp->charge);
 }
 
+// Finds distance between two points in two-dimensional plane
+// returns the calculated distance
+double findDistance(double x1, double y1, double x2, double y2){
+
+	return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+}
+
+// Performs range search
+// Prints all points inside a rectangular area with a given point at it's center 
+void rangeQuery(struct Node* root, double xCoordinate, double yCoordinate, double length, double breadth){
+
+	if(root == NULL)
+		return;
+	if(findDistance(root->x, root->y, xCoordinate, yCoordinate) < sqrt(pow(length, 2) + pow(breadth, 2))/2){
+		if(findDistance(root->x, root->y, xCoordinate, yCoordinate) != 0){printf("(%f, %f)\n", root->x, root->y);}
+		rangeQuery(root->nw, xCoordinate, yCoordinate, length, breadth);
+		rangeQuery(root->ne, xCoordinate, yCoordinate, length, breadth);
+		rangeQuery(root->sw, xCoordinate, yCoordinate, length, breadth);
+		rangeQuery(root->se, xCoordinate, yCoordinate, length, breadth);
+	}
+	else{
+		if(xCoordinate < root->x && yCoordinate > root->y)
+			rangeQuery(root->nw, xCoordinate, yCoordinate, length, breadth);
+		else if((xCoordinate > root->x && yCoordinate > root->y) || (xCoordinate == root->x && yCoordinate > root->y) || (xCoordinate > root->x && yCoordinate == root->y))
+			rangeQuery(root->ne, xCoordinate, yCoordinate, length, breadth);
+		else if((xCoordinate < root->x && yCoordinate < root->y) || (xCoordinate == root->x && yCoordinate < root->y) || (xCoordinate < root->x && yCoordinate == root->y))
+			rangeQuery(root->sw, xCoordinate, yCoordinate, length, breadth);
+		else if(xCoordinate > root->x && yCoordinate < root->y)
+			rangeQuery(root->se, xCoordinate, yCoordinate, length, breadth);
+	}
+	return;
+}
+
 void main(){
     struct Node* root;
     root = initializeRoot();
@@ -172,7 +205,20 @@ void main(){
         root = insert(root, 0.2, 0.2, 3.0);
     else 
         printf("Error! Could not insert because some charge is already present there.\n");
-    
+    if(searchFun(root, -1, -1)==NULL)
+        root = insert(root, -1, -1, -4);
+    else 
+        printf("Error! Could not insert because some charge is already present there.\n");   
+	if(searchFun(root, 1, 1.6)==NULL)
+        root = insert(root, 1, 1.6, 0);
+    else 
+        printf("Error! Could not insert because some charge is already present there.\n");   
+	if(searchFun(root, 5, 3)==NULL)
+        root = insert(root, 5, 3, -2);
+    else 
+        printf("Error! Could not insert because some charge is already present there.\n");   
+		
+	rangeQuery(root, 0.1, 0.1, 4, 4);
     find(root, 0.1, 0.1); // not working don't know why, will look later maybe //fixed - AS
     double min = dist(0.0, 0.04, 0.0, 0.04);
     printf("\nClosest point to (0.04,0.04) is (%f,%f)", nearestPoint(root, 0.04, 0.04, &min)->x, nearestPoint(root, 0.04, 0.04, &min)->y);

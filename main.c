@@ -43,6 +43,8 @@ struct Node* initializeRoot(){
     return temp;
 }
 
+// Finds distance between two points in two-dimensional plane
+// returns the calculated distance
 double dist(double x1, double x2, double y1, double y2){
     return sqrt(pow(x1 - x2, 2.0) + pow(y1 - y2, 2.0));
 }
@@ -161,21 +163,14 @@ void find(struct Node* root, double xCoordinate, double yCoordinate){
     else printf("Charge of value %f is present at this co-ordinate.", temp->charge);
 }
 
-// Finds distance between two points in two-dimensional plane
-// returns the calculated distance
-double findDistance(double x1, double y1, double x2, double y2){
-
-	return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
-}
-
 // Performs range search
 // Prints all points inside a rectangular area with a given point at it's center 
 void rangeQuery(struct Node* root, double xCoordinate, double yCoordinate, double length, double breadth){
 
 	if(root == NULL)
 		return;
-	if(findDistance(root->x, root->y, xCoordinate, yCoordinate) < sqrt(pow(length, 2) + pow(breadth, 2))/2){
-		if(findDistance(root->x, root->y, xCoordinate, yCoordinate) != 0){printf("(%f, %f)\n", root->x, root->y);}
+	if(dist(root->x, xCoordinate, root->y, yCoordinate) < sqrt(pow(length, 2) + pow(breadth, 2))/2){
+		if(dist(root->x, xCoordinate, root->y, yCoordinate) != 0){printf("(%f, %f)\n", root->x, root->y);}
 		rangeQuery(root->nw, xCoordinate, yCoordinate, length, breadth);
 		rangeQuery(root->ne, xCoordinate, yCoordinate, length, breadth);
 		rangeQuery(root->sw, xCoordinate, yCoordinate, length, breadth);

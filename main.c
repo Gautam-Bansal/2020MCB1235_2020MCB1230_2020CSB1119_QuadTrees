@@ -329,6 +329,7 @@ int main() {
             }
             case 7:{
                 choice = 7;
+		printf("Program has been successfully terminated.");
                 break;
             }
             default:{printf("Choose a valid option.\n");}

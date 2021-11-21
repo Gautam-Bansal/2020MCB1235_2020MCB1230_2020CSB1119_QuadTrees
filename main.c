@@ -151,7 +151,7 @@ struct Node* nearestPointFun(struct Node* root, double x, double y, double* min)
 // should be called in main
 void nearestPoint(struct Node* root, double x, double y){
 
-	double min = dist(0.0, x, 0.0, y);
+	double min = dist(root->x, x, root->y, y);
 	struct Node* temp = nearestPointFun(root, x, y, &min);
     if(temp == NULL){printf("No charge around!\n");}
 	else{printf("Closest point to (%f, %f) is (%f, %f)\n", x , y, temp -> x, temp -> y);}

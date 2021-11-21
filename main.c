@@ -181,7 +181,7 @@ struct Node* insertFun(struct Node* root, double xCoordinate, double yCoordinate
 }
 
 // utility function for insertFun
-void insert(struct Node** root,struct Node* rootRef, double xCoordinate, double yCoordinate, int charge) {
+void insert(struct Node** root,struct Node* rootRef, double xCoordinate, double yCoordinate, double charge) {
 
 	struct Node *temp = searchFun(rootRef, xCoordinate, yCoordinate);
 	if(temp == NULL)

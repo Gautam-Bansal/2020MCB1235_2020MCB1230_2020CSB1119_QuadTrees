@@ -45,7 +45,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 1<br>
 Enter coordinates of point:<br>
 (0.1, 0.1)<br>
@@ -61,7 +61,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 1<br>
 Enter coordinates of point:<br> 
 (0.1, 0.1)<br>
@@ -78,7 +78,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 1<br>
 Enter coordinates of point:<br> 
 (0.2, 0.2)<br>
@@ -94,7 +94,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 1<br>
 Enter coordinates of point:<br> 
 (-1, -1)<br>
@@ -110,7 +110,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 1<br>
 Enter coordinates of point:<br> 
 (1, 1.6)<br>
@@ -126,7 +126,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 4<br>
 Enter the midpoint of your range:<br> 
 (0.1, 0.1)<br>
@@ -146,7 +146,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 2<br>
 Enter the point to be searched:<br> 
 (0.1, 0.1)<br>
@@ -161,7 +161,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 2<br>
 Enter the point to be searched:<br> 
 (0, 0)<br>
@@ -176,7 +176,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 3<br>
 Enter the point whose nearest point you would like to find out:<br> 
 (0.4, 0.4)<br>
@@ -191,7 +191,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 5<br>
 Enter the point at which you would like to find out the magnitude of net electric field:<br> 
 (0, 0)<br>
@@ -206,7 +206,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 5<br>
 Enter the point at which you would like to find out the magnitude of net electric field:<br> 
 (0.1, 0.1)<br>
@@ -222,7 +222,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 6<br>
 The point(s) present in the tree is/are as follows:<br>
 (0.100000, 0.100000)<br>
@@ -239,7 +239,7 @@ Which operation would you like to perform:
 6. Display
 7. Quit
 <a/>
-Enter your choice:<br>
+Enter your choice:
 7<br>
 Program has been successfully terminated.<br><br>
 

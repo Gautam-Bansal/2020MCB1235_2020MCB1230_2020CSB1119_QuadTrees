@@ -54,7 +54,7 @@ struct Node* searchFun(struct Node* root, double xCoordinate, double yCoordinate
 void coulumbForce(struct Node *root, double x, double y, double field) {
     struct Node *temp = searchFun(root, x, y);
 	if(temp == NULL) {return;}
-    else {printf("Force acting on charge present at (%f, %f) is %f: \n", x, y, field*(temp -> charge));}
+    else {printf("Force acting on charge present at (%f, %f) is %f\n", x, y, field*(temp -> charge));}
 }
 
 // should NOT be called in 
@@ -77,6 +77,8 @@ double electrofieldFun(struct Node *root, double x, double y, double *field) {
 }
 
 void display(struct Node* root) {
+    	if(root == NULL)
+        	return;
     printf("(%f, %f)\n", root -> x , root -> y); // Print root
     // Visit all children of root point
     display(root -> nw);

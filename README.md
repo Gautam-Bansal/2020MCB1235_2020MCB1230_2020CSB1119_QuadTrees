@@ -33,3 +33,187 @@ What to expect from each option :
 7. Quit option terminates the program.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Sample test case :
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 1
+Enter coordinates of point: 
+(0.1, 0.1)
+Enter charge of point: 
+2
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 1
+Enter coordinates of point: 
+(0.1, 0.1)
+Enter charge of point: 
+3
+Error! Could not insert because a charge is already present there.
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 1
+Enter coordinates of point: 
+(0.2, 0.2)
+Enter charge of point: 
+3
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 1
+Enter coordinates of point: 
+(-1, -1)
+Enter charge of point: 
+-4
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 1
+Enter coordinates of point: 
+(1, 1.6)
+Enter charge of point: 
+0
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 4
+Enter the midpoint of your range: 
+(0.1, 0.1)
+Specify the length and breadth of the range: 
+4 4
+The point(s) present inside range is/are as follows:
+(0.200000, 0.200000)
+(1.000000, 1.600000)
+(-1.000000, -1.000000)
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 2
+Enter the point to be searched: 
+(0.1, 0.1)
+Charge of value 2.000000 is present at this co-ordinate.
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 2
+Enter the point to be searched: 
+(0, 0)
+No charge is present at this co-ordinate!
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 3
+Enter the point whose nearest point you would like to find out: 
+(0.4, 0.4)
+Closest point to (0.400000, 0.400000) is (0.200000, 0.200000)
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 5
+Enter the point at which you would like to find out the magnitude of net electric field: 
+(0, 0)
+Magnitude of electric field at (0.000000, 0.000000) is 172999999999.999939
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 5
+Enter the point at which you would like to find out the magnitude of net electric field: 
+(0.1, 0.1)
+Magnitude of electric field at (0.100000, 0.100000) is 298347107438.016418
+Force acting on charge present at (0.100000, 0.100000) is 596694214876.032837:
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 6
+The point(s) present in the tree is/are as follows:
+(0.100000, 0.100000)
+(0.200000, 0.200000)
+(1.000000, 1.600000)
+(-1.000000, -1.000000)
+
+Which operation would you like to perform:
+1. Insert
+2. Search
+3. Nearest point
+4. Range Search
+5. Electric field/force
+6. Display
+7. Quit
+Enter your choice: 7
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

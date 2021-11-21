@@ -44,11 +44,13 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 1\
-Enter coordinates of point: 
-(0.1, 0.1)\
-Enter charge of point: 
-2
+<a/>
+Enter your choice:<br>
+1<br>
+Enter coordinates of point:<br>
+(0.1, 0.1)<br>
+Enter charge of point:<br> 
+2<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -58,12 +60,14 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 1\
-Enter coordinates of point: 
-(0.1, 0.1)\
-Enter charge of point: 
-3\
-Error! Could not insert because a charge is already present there.
+<a/>
+Enter your choice:<br>
+1<br>
+Enter coordinates of point:<br> 
+(0.1, 0.1)<br>
+Enter charge of point:<br> 
+3<br>
+Error! Could not insert because a charge is already present there.<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -73,11 +77,13 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 1\
-Enter coordinates of point: 
-(0.2, 0.2)\
-Enter charge of point: 
-3
+<a/>
+Enter your choice:<br>
+1<br>
+Enter coordinates of point:<br> 
+(0.2, 0.2)<br>
+Enter charge of point:<br> 
+3<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -87,11 +93,13 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 1\
-Enter coordinates of point: 
-(-1, -1)\
-Enter charge of point: 
--4
+<a/>
+Enter your choice:<br>
+1<br>
+Enter coordinates of point:<br> 
+(-1, -1)<br>
+Enter charge of point:<br> 
+-4<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -101,11 +109,13 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 1\
-Enter coordinates of point: 
-(1, 1.6)\
-Enter charge of point: 
-0
+<a/>
+Enter your choice:<br>
+1<br>
+Enter coordinates of point:<br> 
+(1, 1.6)<br>
+Enter charge of point:<br> 
+0<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -115,15 +125,17 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 4\
-Enter the midpoint of your range: 
-(0.1, 0.1)\
-Specify the length and breadth of the range: 
-4 4\
-The point(s) present inside range is/are as follows:
-(0.200000, 0.200000)\
-(1.000000, 1.600000)\
-(-1.000000, -1.000000)
+<a/>
+Enter your choice:<br>
+4<br>
+Enter the midpoint of your range:<br> 
+(0.1, 0.1)<br>
+Specify the length and breadth of the range:<br> 
+4 4<br>
+The point(s) present inside range is/are as follows:<br>
+(0.200000, 0.200000)<br>
+(1.000000, 1.600000)<br>
+(-1.000000, -1.000000)<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -133,10 +145,12 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 2\
-Enter the point to be searched: 
-(0.1, 0.1)\
-Charge of value 2.000000 is present at this co-ordinate.
+<a/>
+Enter your choice:<br>
+2<br>
+Enter the point to be searched:<br> 
+(0.1, 0.1)<br>
+Charge of value 2.000000 is present at this co-ordinate.<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -146,10 +160,12 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 2\
-Enter the point to be searched: 
-(0, 0)\
-No charge is present at this co-ordinate!
+<a/>
+Enter your choice:<br>
+2<br>
+Enter the point to be searched:<br> 
+(0, 0)<br>
+No charge is present at this co-ordinate!<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -159,10 +175,12 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 3\
-Enter the point whose nearest point you would like to find out: 
-(0.4, 0.4)\
-Closest point to (0.400000, 0.400000) is (0.200000, 0.200000)
+<a/>
+Enter your choice:<br>
+3<br>
+Enter the point whose nearest point you would like to find out:<br> 
+(0.4, 0.4)<br>
+Closest point to (0.400000, 0.400000) is (0.200000, 0.200000)<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -172,10 +190,12 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 5\
-Enter the point at which you would like to find out the magnitude of net electric field: 
-(0, 0)\
-Magnitude of electric field at (0.000000, 0.000000) is 172999999999.999939
+<a/>
+Enter your choice:<br>
+5<br>
+Enter the point at which you would like to find out the magnitude of net electric field:<br> 
+(0, 0)<br>
+Magnitude of electric field at (0.000000, 0.000000) is 172999999999.999939<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -185,11 +205,13 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 5\
-Enter the point at which you would like to find out the magnitude of net electric field: 
-(0.1, 0.1)\
-Magnitude of electric field at (0.100000, 0.100000) is 298347107438.016418\
-Force acting on charge present at (0.100000, 0.100000) is 596694214876.032837
+<a/>
+Enter your choice:<br>
+5<br>
+Enter the point at which you would like to find out the magnitude of net electric field:<br> 
+(0.1, 0.1)<br>
+Magnitude of electric field at (0.100000, 0.100000) is 298347107438.016418<br>
+Force acting on charge present at (0.100000, 0.100000) is 596694214876.032837<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -199,12 +221,14 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 6\
-The point(s) present in the tree is/are as follows:
-(0.100000, 0.100000)\
-(0.200000, 0.200000)\
-(1.000000, 1.600000)\
-(-1.000000, -1.000000)
+<a/>
+Enter your choice:<br>
+6<br>
+The point(s) present in the tree is/are as follows:<br>
+(0.100000, 0.100000)<br>
+(0.200000, 0.200000)<br>
+(1.000000, 1.600000)<br>
+(-1.000000, -1.000000)<br><br>
 
 Which operation would you like to perform:
 1. Insert
@@ -214,6 +238,9 @@ Which operation would you like to perform:
 5. Electric field/force
 6. Display
 7. Quit
-Enter your choice: 7
+<a/>
+Enter your choice:<br>
+7<br>
+Program has been successfully terminated.<br><br>
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

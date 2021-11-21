@@ -24,12 +24,12 @@ If they need to input charge q, just enter q.
 
 What to expect from each option :
 
-1. Insert option just inserts the charge at specified co-ordiante.
+1. Insert option just inserts the charge at specified co-ordinate.
 2. Search option tells the value of charge (if there is one) at the entered co-ordinate.
 3. Nearest option outputs the co-ordinates of nearest charge to the entered co-ordinate.
 4. Range Query prints out all the co-ordinates present in a rectangle with entered centre point and length, breadth.
-5. Electric field options prints out the magnitude of electrostatic field and/or force at entered co-ordinate.
-6. Display option prints out all the co-ordinates present in 2-D space / tree.
+5. Electric field/force option prints out the magnitude of electrostatic field, due to all charges, at the entered co-ordinate. If there is a charge present at the entered co-ordinate, it also prints out the net electrostatic acting on that charge.
+6. Display option prints out all the co-ordinates of charges present in 2-D space / tree.
 7. Quit option terminates the program.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

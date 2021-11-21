@@ -26,7 +26,7 @@ What to expect from each option :
 
 1. Insert option just inserts the charge at specified co-ordiante.
 2. Search option tells the value of charge (if there is) at the entered co-ordinate.
-3. Nearest option outputs the co-ordinates of nearest point to the entered co-ordinate.
+3. Nearest option outputs the co-ordinates of nearest charge to the entered co-ordinate.
 4. Range Query prints out all the co-ordinates present in a rectangle with entered centre point and length, breadth.
 5. Electric field options prints out the magnitude of electric field at entered co-ordinate.
 6. Display option prints out all the co-ordinates present in 2-D space / tree.
